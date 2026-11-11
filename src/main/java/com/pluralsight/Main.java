@@ -13,7 +13,7 @@ public class Main {
 
         System.out.println("Adding .1, 10 times:");
         for (int i = 1; i <= 10; i++) {
-            f += .1;
+            f += .1f;
             d += .1;
             z = z.add(tenCents);
 
@@ -46,7 +46,7 @@ public class Main {
         z = BigDecimal.ZERO;
 
         for (int j = 1; j <= 1000; j++) {
-            f += 19.99;
+            f += 19.99f;
             d += 19.99;
             z = z.add(bigValue);
         }
