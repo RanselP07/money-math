@@ -8,14 +8,14 @@ public class Main {
         float f = 0f;
         double d = 0;
         BigDecimal z = BigDecimal.ZERO;
-        BigDecimal value = new BigDecimal(".1");
+        BigDecimal tenCents = new BigDecimal(".1");
         BigDecimal bigValue = new BigDecimal("19.99");
 
         System.out.println("Adding .1, 10 times:");
         for (int i = 1; i <= 10; i++) {
             f += .1;
             d += .1;
-            z = z.add(value);
+            z = z.add(tenCents);
 
             System.out.println("\n" + i + ". Float: " + f + " Double: " + d + " BigDecimal: " + z);
             System.out.print("Does the float compare with the double? ");
@@ -37,7 +37,7 @@ public class Main {
                 System.out.print("no\n");
                 System.out.printf("Double: %.20f", f);
                 System.out.printf(" does not equal to %.20f ", z);
-                System.out.println();
+                System.out.println("It's off by");
             }
         }
 
@@ -74,5 +74,8 @@ public class Main {
             System.out.printf(" does not equal to %.20f ", z);
             System.out.println();
         }
+
+        System.out.printf("\nThe float is off by %.2f", (f - d));
+        System.out.print(" cents (give or take a cent)!");
     }
 }
